@@ -73,7 +73,8 @@ export const postControlAreaActivity = async (id: string, controlType: string) =
   try {
     await axios.post(`${config.base_url}/control/area/${id}/activity`, {
       Type: 'ControlArea',
-      AreaControlType: controlType
+      AreaControlType: controlType,
+      ExitDelay: true
     }, {
       headers: {
         Cookie: `LoginSessId=${userID}`
